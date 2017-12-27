@@ -17,5 +17,11 @@ export class ShoppinglistsService {
     return null;
   }
 
+  public updateShoppingList(name: string, list: ListModel) {
+    console.log('name is ', name, 'and list is ', list, ' and we need to update the lists.');
+    // TODO: push changes to list
+    // TODO: push changes to server
+  }
+
 
 }

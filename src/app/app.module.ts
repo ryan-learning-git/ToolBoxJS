@@ -13,6 +13,9 @@ import { LoginComponent } from './components/functions/login/login.component';
 import { MyaccountComponent } from './components/functions/myaccount/myaccount.component';
 import {ShoppinglistsService} from './components/services/shoppinglists.service';
 import {AppRoutingModule} from './app-routing.module';
+import {DropdownDirective} from './components/directives/dropdown.directive';
+import { LogoutComponent } from './components/functions/logout/logout.component';
+import { LinkshomeComponent } from './components/functions/links/linkshome/linkshome.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,10 @@ import {AppRoutingModule} from './app-routing.module';
     ListsComponent,
     ListComponent,
     LoginComponent,
-    MyaccountComponent
+    MyaccountComponent,
+    DropdownDirective,
+    LogoutComponent,
+    LinkshomeComponent
   ],
   imports: [
     BrowserModule,

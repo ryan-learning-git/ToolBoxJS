@@ -11,6 +11,7 @@ import { ListsComponent } from './components/functions/shoppinglists/lists/lists
 import { ListComponent } from './components/functions/shoppinglists/list/list.component';
 import { LoginComponent } from './components/functions/login/login.component';
 import { MyaccountComponent } from './components/functions/myaccount/myaccount.component';
+import {ShoppinglistsService} from './components/services/shoppinglists.service';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,7 @@ import { MyaccountComponent } from './components/functions/myaccount/myaccount.c
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [ShoppinglistsService], // having it here means that a single instance is used everywhere, ie a singleton.
   bootstrap: [AppComponent]
 })
 export class AppModule { }

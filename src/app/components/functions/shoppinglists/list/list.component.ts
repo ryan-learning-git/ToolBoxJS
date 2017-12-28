@@ -64,4 +64,8 @@ export class ListComponent implements OnInit {
     console.log('Type name is ', this.typeNameInputRef.nativeElement.value);
   }
 
+  public delete(id: number): void {
+    console.log('Delete ', id);
+  }
+
 }

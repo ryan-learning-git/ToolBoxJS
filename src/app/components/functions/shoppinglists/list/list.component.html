@@ -25,22 +25,26 @@
 </div>
 
 <h2>Not got yet...</h2>
-<p>Tap each item once you have it.</p>
 <ul class="list-group">
-  <a *ngFor="let item of getListItemsNotBought()" class="list-group-item" style="cursor:pointer;" [routerLink]="list.getId()"
+  <li *ngFor="let item of getListItemsNotBought()" class="list-group-item clearfix"
   >
     {{ item.itemQuantity }} {{getListItemType(item.itemTypeID).quantityPrefix}} {{getListItemType(item.itemTypeID).name}} {{getListItemType(item.itemTypeID).quantitySuffix}}
-  </a>
+
+    <div class="btn-group pull-right" role="group" aria-label="Basic example">
+      <button class="btn btn-primary" (click)="delete(item.id)"><div class="glyphicon glyphicon-check"></div> Got</button>
+      <button class="btn btn-danger"><div class="glyphicon glyphicon-trash"></div> Delete</button>
+    </div>
+  </li>
 
 </ul>
 
 
+
 <h2>Got</h2>
-<p>Tap an item to move it back to the 'not got yet' list if you don't actually have it.</p>
 <ul class="list-group">
-  <a *ngFor="let item of getListItemsBought()" class="list-group-item" style="cursor:pointer;" [routerLink]="list.getId()"
+  <li *ngFor="let item of getListItemsBought()" class="list-group-item"
   >
     {{ item.itemQuantity }} {{getListItemType(item.itemTypeID).quantityPrefix}} {{getListItemType(item.itemTypeID).name}} {{getListItemType(item.itemTypeID).quantitySuffix}}
-  </a>
+  </li>
 
 </ul>

@@ -65,4 +65,13 @@ export class ShoppinglistsService {
     return items;
   }
 
+  public getItemType(typeID: number): ListItemTypeModel {
+    for (const type of this.shoppingListItemTypes){
+      if (type.id === typeID){
+        return type;
+      }
+    }
+    return null;
+  }
+
 }

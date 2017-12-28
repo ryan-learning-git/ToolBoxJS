@@ -4,7 +4,7 @@ export class ListItemModel {
   private _completedDateTime: Date;
 
 
-  constructor(private _id, private _listID: number, private _itemID: number, private _itemQuantity: number,
+  constructor(private _id, private _listID: number, private _itemTypeID: number, private _itemQuantity: number,
               private _addedBy: number, private _addedDateTime: Date, private _deadline: Date) {
   }
 
@@ -17,8 +17,8 @@ export class ListItemModel {
     return this._listID;
   }
 
-  get itemID(): number {
-    return this._itemID;
+  get itemTypeID(): number {
+    return this._itemTypeID;
   }
 
   get itemQuantity(): number {

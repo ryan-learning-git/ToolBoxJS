@@ -31,8 +31,8 @@
     {{ item.itemQuantity }} {{getListItemType(item.itemTypeID).quantityPrefix}} {{getListItemType(item.itemTypeID).name}} {{getListItemType(item.itemTypeID).quantitySuffix}}
 
     <div class="btn-group pull-right" role="group" aria-label="Basic example">
-      <button class="btn btn-primary" (click)="delete(item.id)"><div class="glyphicon glyphicon-check"></div> Got</button>
-      <button class="btn btn-danger"><div class="glyphicon glyphicon-trash"></div> Delete</button>
+      <button class="btn btn-primary" (click)="got(item.id)"><div class="glyphicon glyphicon-check"></div> Got</button>
+      <button class="btn btn-danger" (click)="delete(item.id)"><div class="glyphicon glyphicon-trash"></div> Delete</button>
     </div>
   </li>
 

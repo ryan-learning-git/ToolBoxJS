@@ -68,4 +68,8 @@ export class ListComponent implements OnInit {
     console.log('Delete ', id);
   }
 
+  public got(id: number): void {
+    console.log('Got ', id);
+  }
+
 }

@@ -22,9 +22,9 @@
   </div>
 </div>
 <ul class="list-group">
-  <a class="list-group-item" style="cursor:pointer;"
-     *ngFor="let list of shoppingLists"
-  >
-    {{ list.getName() }} ({{getItemCount(list.getId())}})
-  </a>
+    <a *ngFor="let list of shoppingLists" class="list-group-item" style="cursor:pointer;" [routerLink]="list.getId()"
+    >
+      {{ list.getName() }} ({{getItemCount(list.getId())}})
+    </a>
+
 </ul>

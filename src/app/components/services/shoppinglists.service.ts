@@ -40,9 +40,9 @@ export class ShoppinglistsService {
     return this.shoppingLists.slice(); // return a copy, not the actual array
   }
 
-  public getShoppingList(name: string): ListModel {
+  public getShoppingList(id: number): ListModel {
     for (const list of this.shoppingLists){
-      if (list.getName() === name) {
+      if (list.getId() === id) {
         return list;
       }
     }

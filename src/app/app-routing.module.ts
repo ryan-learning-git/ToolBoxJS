@@ -6,8 +6,10 @@ import {HomepageComponent} from './components/functions/homepage/homepage.compon
 import {MyaccountComponent} from './components/functions/myaccount/myaccount.component';
 import {LogoutComponent} from './components/functions/logout/logout.component';
 import {LinkshomeComponent} from './components/functions/links/linkshome/linkshome.component';
+import {ListComponent} from './components/functions/shoppinglists/list/list.component';
 
 const appRoutes: Routes = [
+  { path: 'shoppingLists/:id', component: ListComponent },
   { path: 'shoppingLists', component: ListsComponent },
   { path: 'links', component: LinkshomeComponent },
   { path: 'login', component: LoginComponent },

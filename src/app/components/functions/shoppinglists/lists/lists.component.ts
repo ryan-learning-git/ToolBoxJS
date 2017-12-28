@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {ShoppinglistsService} from '../../../services/shoppinglists.service';
-import {ListModel} from '../../../../Models/list.model';
+import {ListModel} from '../../../../Models/shoppinglists/list.model';
 
 @Component({
   selector: 'app-lists',
@@ -9,12 +9,18 @@ import {ListModel} from '../../../../Models/list.model';
 })
 export class ListsComponent implements OnInit {
 
-  private shoppingLists: ListModel[];
+  @ViewChild('listNameInput') nameInputRef: ElementRef;
+  shoppingLists: ListModel[];
 
   constructor(private shoppingListService: ShoppinglistsService) { }
 
   ngOnInit() {
     this.shoppingLists = this.shoppingListService.getShoppingLists();
+  }
+
+  doAdd(){
+    const name = this.nameInputRef.nativeElement.value;
+    console.log('Add shopping list of name ', name);
   }
 
 }

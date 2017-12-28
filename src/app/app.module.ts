@@ -16,6 +16,7 @@ import {AppRoutingModule} from './app-routing.module';
 import {DropdownDirective} from './components/directives/dropdown.directive';
 import { LogoutComponent } from './components/functions/logout/logout.component';
 import { LinkshomeComponent } from './components/functions/links/linkshome/linkshome.component';
+import {MeService} from './components/services/me.service';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,7 @@ import { LinkshomeComponent } from './components/functions/links/linkshome/links
     HttpClientModule,
     AppRoutingModule
   ],
-  providers: [ShoppinglistsService], // having it here means that a single instance is used everywhere, ie a singleton.
+  providers: [ShoppinglistsService, MeService], // having it here means that a single instance is used everywhere, ie a singleton.
   bootstrap: [AppComponent]
 })
 export class AppModule { }

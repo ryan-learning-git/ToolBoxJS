@@ -57,6 +57,11 @@ export class ShoppinglistsService {
 
   public getShoppingListItems(listID: number): ListItemModel[] {
     const items: ListItemModel[] = [];
+    for (const item of this.shoppingListItems){
+      if (item.listID === listID) {
+        items.push(item);
+      }
+    }
     return items;
   }
 

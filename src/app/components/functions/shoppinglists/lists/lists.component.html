@@ -25,6 +25,6 @@
   <a class="list-group-item" style="cursor:pointer;"
      *ngFor="let list of shoppingLists"
   >
-    {{ list.name }}
+    {{ list.getName() }} ({{getItemCount(list.getId())}})
   </a>
 </ul>

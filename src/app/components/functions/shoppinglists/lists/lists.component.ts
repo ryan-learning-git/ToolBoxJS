@@ -23,4 +23,8 @@ export class ListsComponent implements OnInit {
     console.log('Add shopping list of name ', name);
   }
 
+  public getItemCount(listID: number): number {
+    return this.shoppingListService.getShoppingListItems(listID).length;
+  }
+
 }
